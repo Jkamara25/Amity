@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amity Cards – Shared Loyalty Identities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --fg: #111827;
+      --accent-blue: #00539f;
+      --accent-red: #ee1c2e;
+      --muted: #6b7280;
+      --border: #e1e4f0;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      --max-width: 980px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent-blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.7rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.1rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    nav a {
+      color: var(--fg);
+      opacity: 0.8;
+    }
+    nav a:hover { opacity: 1; }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      line-height: 1.15;
+    }
+
+    p {
+      margin-bottom: 0.9rem;
+      max-width: 46rem;
+    }
+
+    .muted { color: var(--muted); font-size: 0.9rem; }
+
+    .card-grid {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.6rem;
+    }
+
+    .qr-card {
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      padding: 1.1rem 1.1rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.04);
+    }
+
+    .qr-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 0.8rem;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 0.4rem;
+      border: 1px solid #d4d7e4;
+    }
+
+    .qr-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-blue);
+      margin-bottom: 0.25rem;
+    }
+
+    .qr-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.8rem 1.5rem 2.8rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 720px) {
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="amity-logo.png" alt="Amity logo" class="logo-img">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#how">How</a></li>
+          <li><a href="index.html#collective">Collective</a></li>
+          <li><a href="index.html#join">Join</a></li>
+          <li><a href="cards.html">Cards</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="section-label">Cards</div>
+      <h1>Amity loyalty cards & QR codes</h1>
+      <p>
+        This page collects speculative Amity loyalty cards: QR codes and barcodes that imagine how a
+        shared customer identity might move through Tesco-style systems. For the project, these cards
+        are artefacts to be scanned in exhibitions or documentation, not live accounts at tills.
+      </p>
+      <p class="muted">
+        Each card can link back to this website, a project PDF, or a specific narrative about how Amity
+        behaves within one store’s ecosystem.
+      </p>
+
+      <div class="card-grid">
+        <div class="qr-card">
+          <img src="amity-tesco-qr.png" alt="Amity Tesco QR card">
+          <div class="qr-label">Amity · Tesco</div>
+          <div class="qr-sub">A shared Clubcard-style identity for multiple Amity members.</div>
+        </div>
+
+        <div class="qr-card">
+          <img src="amity-sainsburys-qr.png" alt="Amity Sainsbury’s QR card">
+          <div class="qr-label">Amity · Sainsbury’s</div>
+          <div class="qr-sub">Amity imagined inside the Nectar ecosystem.</div>
+        </div>
+
+        <div class="qr-card">
+          <img src="amity-morrisons-qr.png" alt="Amity Morrisons QR card">
+          <div class="qr-label">Amity · Morrisons</div>
+          <div class="qr-sub">A collective presence within the More-style scheme.</div>
+        </div>
+
+        <!-- Extra example slot -->
+        <!--
+        <div class="qr-card">
+          <img src="amity-custom-qr.png" alt="Custom Amity QR card">
+          <div class="qr-label">Amity · Custom</div>
+          <div class="qr-sub">Experimental card for alternative futures of loyalty.</div>
+        </div>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Amity card gallery · part of a speculative design project on loyalty, identity and data.
+  </footer>
+</body>
+</html>
